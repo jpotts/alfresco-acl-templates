@@ -1,0 +1,9 @@
+{
+  "inherit": false,
+  "permissions": [
+    {
+      "authorityTemplate": "site-manager-group",
+      "permission": "Consumer"
+    }
+  ]
+}

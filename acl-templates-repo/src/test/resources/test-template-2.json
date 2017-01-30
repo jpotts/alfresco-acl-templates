@@ -1,0 +1,17 @@
+{
+  "inherit": false,
+  "permissions": [
+    {
+      "authorityTemplate": "site-manager-group",
+      "permission": "Consumer"
+    },
+    {
+      "authorityTemplate": "site-collaborator-group",
+      "permission": "Consumer"
+    },
+    {
+      "authorityTemplate": "site-contributor-group",
+      "permission": "Consumer"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "inherit": false,
+  "permissions": [
+    {
+      "authorityTemplate": "bad-authority-template-name",
+      "permission": "Consumer"
+    }
+  ]
+}
