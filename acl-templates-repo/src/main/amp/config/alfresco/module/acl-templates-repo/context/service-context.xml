@@ -22,28 +22,28 @@
         <property name="siteService">
             <ref bean="SiteService" />
         </property>
-        <property name="role" value="Manager" />
+        <property name="role" value="SiteManager" />
     </bean>
 
     <bean id="authority-template.site-collaborator-group" class="com.conexiam.acl.templates.authority.resolvers.SiteRoleGroupResolver">
         <property name="siteService">
             <ref bean="SiteService" />
         </property>
-        <property name="role" value="Collaborator" />
+        <property name="role" value="SiteCollaborator" />
     </bean>
 
     <bean id="authority-template.site-consumer-group" class="com.conexiam.acl.templates.authority.resolvers.SiteRoleGroupResolver">
         <property name="siteService">
             <ref bean="SiteService" />
         </property>
-        <property name="role" value="Consumer" />
+        <property name="role" value="SiteConsumer" />
     </bean>
 
     <bean id="authority-template.site-contributor-group" class="com.conexiam.acl.templates.authority.resolvers.SiteRoleGroupResolver">
         <property name="siteService">
             <ref bean="SiteService" />
         </property>
-        <property name="role" value="Contributor" />
+        <property name="role" value="SiteContributor" />
     </bean>
 
     <bean id="acl-template-service" class="com.conexiam.acl.templates.service.AclTemplateService">
@@ -69,6 +69,13 @@
                 <entry key="site-consumer-group" value-ref="authority-template.site-consumer-group" />
                 <entry key="site-contributor-group" value-ref="authority-template.site-contributor-group" />
             </map>
+        </property>
+    </bean>
+
+    <bean class="com.conexiam.acl.templates.service.AclTemplateServiceScopedObject" parent="baseJavaScriptExtension">
+        <property name="extensionName" value="aclTemplates" />
+        <property name="aclTemplateService">
+            <ref bean="acl-template-service" />
         </property>
     </bean>
 

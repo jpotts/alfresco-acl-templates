@@ -100,16 +100,16 @@ public class AuthorityResolverTest {
                 contentProps).getChildRef();
 
         String authority = siteManagerAuthorityResolver.resolve(testFolder);
-        assertEquals("GROUP_site_" + siteShortName + "_Manager", authority);
+        assertEquals("GROUP_site_" + siteShortName + "_SiteManager", authority);
 
         authority = siteCollaboratorAuthorityResolver.resolve(testFolder);
-        assertEquals("GROUP_site_" + siteShortName + "_Collaborator", authority);
+        assertEquals("GROUP_site_" + siteShortName + "_SiteCollaborator", authority);
 
         authority = siteContributorAuthorityResolver.resolve(testFolder);
-        assertEquals("GROUP_site_" + siteShortName + "_Contributor", authority);
+        assertEquals("GROUP_site_" + siteShortName + "_SiteContributor", authority);
 
         authority = siteConsumerAuthorityResolver.resolve(testFolder);
-        assertEquals("GROUP_site_" + siteShortName + "_Consumer", authority);
+        assertEquals("GROUP_site_" + siteShortName + "_SiteConsumer", authority);
     }
 
     @Test
