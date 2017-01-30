@@ -63,6 +63,12 @@
             <groupId>${alfresco.groupId}</groupId>
             <artifactId>alfresco-repository</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.conexiam</groupId>
+            <artifactId>acl-templates-common</artifactId>
+            <version>1.0.0</version>
+            <type>JAR</type>
+        </dependency>
 
         <!-- If we are running tests then make the H2 Scripts available
              Note. tests are skipped when you are running -Pamp-to-war -->
@@ -78,6 +84,11 @@
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.conexiam</groupId>
+            <artifactId>acl-templates-common</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

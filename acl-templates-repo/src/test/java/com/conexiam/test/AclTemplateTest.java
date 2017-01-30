@@ -1,7 +1,7 @@
 package com.conexiam.test;
 
+import com.conexiam.acl.templates.com.conexiam.acl.templates.service.AclTemplateService;
 import com.conexiam.acl.templates.exceptions.AclTemplateServiceException;
-import com.conexiam.acl.templates.service.AclTemplateService;
 import com.tradeshift.test.remote.Remote;
 import com.tradeshift.test.remote.RemoteTestRunner;
 import org.alfresco.model.ContentModel;

@@ -1,3 +1,5 @@
 acl-templates-repo/.idea
 acl-templates-repo/alf_data_dev
 acl-templates-repo/target
+.idea
+acl-templates-common/target

@@ -12,7 +12,7 @@ public class AclTemplateServiceScopedObject extends BaseScopableProcessorExtensi
     static Logger logger = Logger.getLogger(AclTemplateServiceScopedObject.class);
 
     // Dependencies
-    private AclTemplateService aclTemplateService;
+    private AclTemplateServiceImpl aclTemplateService;
 
     public void apply(String templateId, ScriptNode scriptNode) throws AclTemplateServiceException {
         aclTemplateService.apply(templateId, scriptNode.getNodeRef());
@@ -26,7 +26,7 @@ public class AclTemplateServiceScopedObject extends BaseScopableProcessorExtensi
         return aclTemplateService.getAuthorityResolvers();
     }
 
-    public void setAclTemplateService(AclTemplateService aclTemplateService) {
+    public void setAclTemplateService(AclTemplateServiceImpl aclTemplateService) {
         this.aclTemplateService = aclTemplateService;
     }
 }

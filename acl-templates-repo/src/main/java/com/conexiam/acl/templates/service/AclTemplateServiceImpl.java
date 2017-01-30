@@ -1,6 +1,7 @@
 package com.conexiam.acl.templates.service;
 
 import com.conexiam.acl.templates.authority.resolvers.AuthorityResolver;
+import com.conexiam.acl.templates.com.conexiam.acl.templates.service.AclTemplateService;
 import com.conexiam.acl.templates.exceptions.AclTemplateServiceException;
 import com.conexiam.acl.templates.model.AclTemplate;
 import com.conexiam.acl.templates.model.AclTemplatePermission;
@@ -14,9 +15,12 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
-public class AclTemplateService {
+public class AclTemplateServiceImpl implements AclTemplateService {
     // Dependencies
     private NodeService nodeService;
     private PermissionService permissionService;
@@ -27,16 +31,8 @@ public class AclTemplateService {
 
     private ObjectMapper mapper = new ObjectMapper();
 
-    static Logger logger = Logger.getLogger(AclTemplateService.class);
+    static Logger logger = Logger.getLogger(AclTemplateServiceImpl.class);
 
-    /**
-     * Applies the specified ACL template to the provided nodeRef. The caller must have the rights necessary to
-     * change permissions on the specified node.
-     *
-     * @param templateId The cm:name of the JSON file in the ACL template folder that is to be applied.
-     * @param nodeRef The node reference of the node to apply the template to.
-     * @throws AclTemplateServiceException when something bad happens, like if the template isn't found or cannot be parsed.
-     */
     public void apply(String templateId, NodeRef nodeRef) throws AclTemplateServiceException {
         // Fetch the ACL template that corresponds to the templateId
         AclTemplate template = getAclTemplate(templateId);
@@ -45,10 +41,6 @@ public class AclTemplateService {
         applyTemplate(template, nodeRef);
     }
 
-    /**
-     * Return a list of the ACL templates that the template service knows about.
-     * @return Set of Strings where each String is the name of an ACL template stored in the ACL template folder.
-     */
     public Set<String> getAclTemplates() {
         String query = "+PATH:\"" + aclTemplateFolderPath + "/*\"";
         ResultSet results = searchService.query(StoreRef.STORE_REF_WORKSPACE_SPACESSTORE, SearchService.LANGUAGE_LUCENE, query);
@@ -60,10 +52,6 @@ public class AclTemplateService {
         return aclTemplates;
     }
 
-    /**
-     * Returns a list of the authority resolvers that the template service knows about.
-     * @return Set of Strings where each String is the ID of an AuthorityResolver bean.
-     */
     public Set<String> getAuthorityResolvers() {
         return authorityResolvers.keySet();
     }

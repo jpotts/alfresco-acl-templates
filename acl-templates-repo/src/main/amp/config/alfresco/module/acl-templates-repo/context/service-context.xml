@@ -46,7 +46,7 @@
         <property name="role" value="SiteContributor" />
     </bean>
 
-    <bean id="acl-template-service" class="com.conexiam.acl.templates.service.AclTemplateService">
+    <bean id="acl-template-service" class="com.conexiam.acl.templates.service.AclTemplateServiceImpl">
         <property name="nodeService">
             <ref bean="NodeService" />
         </property>

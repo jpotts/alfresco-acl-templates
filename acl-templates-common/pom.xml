@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.conexiam</groupId>
+    <artifactId>acl-templates-common</artifactId>
+    <version>1.0.0</version>
+    <name>acl-templates-common</name>
+    <packaging>jar</packaging>
+    <description>Common classes related to ACL Templates</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.alfresco</groupId>
+            <artifactId>alfresco-repository</artifactId>
+            <version>5.1.e</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>alfresco-public</id>
+            <url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <pluginManagement>
+                <plugins>
+                      <plugin>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>2.3.2</version>
+                        <configuration>
+                          <source>1.8</source>
+                          <target>1.8</target>
+                        </configuration>
+                      </plugin>
+                </plugins>
+        </pluginManagement>
+    </build>
+</project>
+

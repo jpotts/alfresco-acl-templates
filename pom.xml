@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.conexiam</groupId>
+    <artifactId>alfresco-acl-templates</artifactId>
+    <version>1.0.0</version>
+    <name>Alfresco ACL Templates</name>
+    <packaging>pom</packaging>
+    <description>Externalizes and centralizes the management of Access Control Lists and provides a service to apply those templates to nodes.</description>
+
+    <modules>
+        <module>acl-templates-common</module>
+        <module>acl-templates-repo</module>
+    </modules>
+
+</project>
