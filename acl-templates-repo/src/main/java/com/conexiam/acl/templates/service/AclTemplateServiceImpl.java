@@ -1,7 +1,6 @@
 package com.conexiam.acl.templates.service;
 
 import com.conexiam.acl.templates.authority.resolvers.AuthorityResolver;
-import com.conexiam.acl.templates.com.conexiam.acl.templates.service.AclTemplateService;
 import com.conexiam.acl.templates.exceptions.AclTemplateServiceException;
 import com.conexiam.acl.templates.model.AclTemplate;
 import com.conexiam.acl.templates.model.AclTemplatePermission;

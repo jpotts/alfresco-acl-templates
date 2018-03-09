@@ -1,4 +1,4 @@
-package com.conexiam.acl.templates.com.conexiam.acl.templates.service;
+package com.conexiam.acl.templates.service;
 
 import com.conexiam.acl.templates.exceptions.AclTemplateServiceException;
 import org.alfresco.service.cmr.repository.NodeRef;
