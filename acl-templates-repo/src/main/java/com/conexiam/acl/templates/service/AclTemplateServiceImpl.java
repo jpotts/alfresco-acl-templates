@@ -110,6 +110,8 @@ public class AclTemplateServiceImpl implements AclTemplateService {
                     String authority = resolver.resolve(nodeRef);
                     if (authority != null) {
                         entry.setAuthority(authority);
+                    } else {
+                        throw new AclTemplateServiceException("Could not resolve authority using authority template: " + authorityTemplate + " nodeRef: " + nodeRef.toString());
                     }
                 } else {
                     throw new AclTemplateServiceException("Could not resolve authority template: " + authorityTemplate);
