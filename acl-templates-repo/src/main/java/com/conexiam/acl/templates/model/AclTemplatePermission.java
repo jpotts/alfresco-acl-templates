@@ -4,7 +4,6 @@ public class AclTemplatePermission {
     private String authorityTemplate;
     private String authority;
     private String permission;
-    private boolean allow = true;
 
     public String getAuthorityTemplate() {
         return authorityTemplate;
@@ -29,12 +28,4 @@ public class AclTemplatePermission {
     public void setPermission(String permission) {
         this.permission = permission;
     }
-    
-    public boolean getAllow() {
-    	return this.allow;
-    }
-
-    public void setAllow(boolean allow) {
-		this.allow = allow;
-	}
 }

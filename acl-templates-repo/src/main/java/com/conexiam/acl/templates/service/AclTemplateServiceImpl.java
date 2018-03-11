@@ -97,7 +97,7 @@ public class AclTemplateServiceImpl implements AclTemplateService {
         permissionService.deletePermissions(nodeRef);
         permissionService.setInheritParentPermissions(nodeRef, template.isInherit());
         for (AclTemplatePermission entry : template.getPermissions()) {
-            permissionService.setPermission(nodeRef, entry.getAuthority(), entry.getPermission(), entry.getAllow());
+            permissionService.setPermission(nodeRef, entry.getAuthority(), entry.getPermission(), true);
         }
     }
 
