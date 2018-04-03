@@ -1,7 +1,6 @@
 package com.conexiam.acl.templates.service;
 
 import com.conexiam.acl.templates.authority.resolvers.AuthorityResolver;
-import com.conexiam.acl.templates.com.conexiam.acl.templates.service.AclTemplateService;
 import com.conexiam.acl.templates.exceptions.AclTemplateServiceException;
 import com.conexiam.acl.templates.model.AclTemplate;
 import com.conexiam.acl.templates.model.AclTemplatePermission;
@@ -98,7 +97,7 @@ public class AclTemplateServiceImpl implements AclTemplateService {
         permissionService.deletePermissions(nodeRef);
         permissionService.setInheritParentPermissions(nodeRef, template.isInherit());
         for (AclTemplatePermission entry : template.getPermissions()) {
-            permissionService.setPermission(nodeRef, entry.getAuthority(), entry.getPermission(), true);
+            permissionService.setPermission(nodeRef, entry.getAuthority(), entry.getPermission(), entry.getAllow());
         }
     }
 
@@ -111,6 +110,8 @@ public class AclTemplateServiceImpl implements AclTemplateService {
                     String authority = resolver.resolve(nodeRef);
                     if (authority != null) {
                         entry.setAuthority(authority);
+                    } else {
+                        throw new AclTemplateServiceException("Could not resolve authority using authority template: " + authorityTemplate + " nodeRef: " + nodeRef.toString());
                     }
                 } else {
                     throw new AclTemplateServiceException("Could not resolve authority template: " + authorityTemplate);

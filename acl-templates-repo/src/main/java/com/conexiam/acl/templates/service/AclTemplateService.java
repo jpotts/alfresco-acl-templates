@@ -1,12 +1,16 @@
-package com.conexiam.acl.templates.com.conexiam.acl.templates.service;
+package com.conexiam.acl.templates.service;
 
 import com.conexiam.acl.templates.exceptions.AclTemplateServiceException;
 import org.alfresco.service.cmr.repository.NodeRef;
+import org.alfresco.service.namespace.NamespaceService;
+import org.alfresco.service.namespace.QName;
 
 import java.util.Set;
 
 public interface AclTemplateService {
 
+	public static QName ACL_TEMPLATE_SERVICE = QName.createQName(NamespaceService.ALFRESCO_URI, "acl-template-service");
+	
     /**
      * Applies the specified ACL template to the provided nodeRef. The caller must have the rights necessary to
      * change permissions on the specified node.
