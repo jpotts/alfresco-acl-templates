@@ -4,3 +4,6 @@ acl-templates-repo/target
 .idea
 acl-templates-common/target
 *.log
+alf_data_dev
+integration-tests/target
+target

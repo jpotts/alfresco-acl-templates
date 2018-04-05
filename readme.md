@@ -52,9 +52,19 @@ Or, if you are using JavaScript, it would look like:
 
 In addition to the apply method, you can also ask the service for the list of ACL Templates it knows about using `getAclTemplates()` as well as the list of Authority Resolvers it knows about using `getAuthorityResolvers()`.
 
-## Tests
+## Integration Tests
 
-If you check the source code out you can use Maven to run tests with `mvn test`.
+If you check the source code out you can use Maven to run integration tests. To do this, first start the embedded
+Alfresco server with `mvn clean install alfresco:run -DskipTests=true`. Wait for the server to start up.
+
+Next, copy the test ACL templates from integration-tests/src/test/resources into the "ACL Templates" folder under the
+Data Dictionary. Because this project has no Share AMP, you can either start up Share in some other Tomcat, use a script
+to copy in the test templates via CMIS, or just map a drive to http://localhost:8080/alfresco/webdav.
+
+If the ACL Templates folder does not exist something went wrong with the server startup.with `mvn test`.
+
+With the test templates in place you are ready to run the integration tests. You can do so from your IDE if you want, or
+open a new terminal window, change to the project root and run `mvn integration-test`.
 
 ## Installing
 
