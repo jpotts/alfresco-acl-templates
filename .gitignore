@@ -7,3 +7,7 @@ acl-templates-common/target
 alf_data_dev
 integration-tests/target
 target
+*.project
+*.classpath
+/.settings/
+/integration-tests/.settings/
