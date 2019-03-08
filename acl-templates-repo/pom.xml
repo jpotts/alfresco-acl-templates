@@ -2,9 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.conexiam</groupId>
     <artifactId>acl-templates-repo</artifactId>
-    <version>1.0.1</version>
     <name>acl-templates-repo Repository AMP project</name>
     <packaging>jar</packaging>
     <description>Manages the lifecycle of the acl-templates-repo Repository AMP (Alfresco Module Package)</description>
