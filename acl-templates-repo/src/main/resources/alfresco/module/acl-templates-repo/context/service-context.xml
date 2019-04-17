@@ -45,6 +45,8 @@
         </property>
         <property name="role" value="SiteContributor" />
     </bean>
+    
+    <bean id="authority-template.everyone-group" class="com.conexiam.acl.templates.authority.resolvers.EveryoneGroupResolver" ></bean>
 
     <bean id="acl-template-service" class="com.conexiam.acl.templates.service.AclTemplateServiceImpl">
         <property name="nodeService">
@@ -68,6 +70,7 @@
                 <entry key="site-collaborator-group" value-ref="authority-template.site-collaborator-group" />
                 <entry key="site-consumer-group" value-ref="authority-template.site-consumer-group" />
                 <entry key="site-contributor-group" value-ref="authority-template.site-contributor-group" />
+                <entry key="everyone-group" value-ref="authority-template.everyone-group" />
             </map>
         </property>
     </bean>
