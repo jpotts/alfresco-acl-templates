@@ -1,6 +1,6 @@
-package com.conexiam.acl.templates.service;
+package com.metaversant.acl.templates.service;
 
-import com.conexiam.acl.templates.exceptions.AclTemplateServiceException;
+import com.metaversant.acl.templates.exceptions.AclTemplateServiceException;
 import org.alfresco.repo.jscript.BaseScopableProcessorExtension;
 import org.alfresco.repo.jscript.ScriptNode;
 import org.apache.log4j.Logger;

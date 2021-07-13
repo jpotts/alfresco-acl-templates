@@ -1,4 +1,4 @@
-package com.conexiam.acl.templates.model;
+package com.metaversant.acl.templates.model;
 
 public class AclTemplatePermission {
     private String authorityTemplate;

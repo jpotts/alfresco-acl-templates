@@ -1,7 +1,7 @@
-package com.conexiam.test;
+package com.metaversant.test;
 
-import com.conexiam.acl.templates.exceptions.AclTemplateServiceException;
-import com.conexiam.acl.templates.service.AclTemplateService;
+import com.metaversant.acl.templates.exceptions.AclTemplateServiceException;
+import com.metaversant.acl.templates.service.AclTemplateService;
 import org.alfresco.model.ContentModel;
 import org.alfresco.rad.test.AbstractAlfrescoIT;
 import org.alfresco.rad.test.AlfrescoTestRunner;

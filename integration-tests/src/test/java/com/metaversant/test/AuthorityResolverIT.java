@@ -1,7 +1,7 @@
-package com.conexiam.test;
+package com.metaversant.test;
 
-import com.conexiam.acl.templates.authority.resolvers.AuthorityResolver;
-import com.conexiam.acl.templates.service.AclTemplateService;
+import com.metaversant.acl.templates.authority.resolvers.AuthorityResolver;
+import com.metaversant.acl.templates.service.AclTemplateService;
 import org.alfresco.model.ContentModel;
 import org.alfresco.rad.test.AbstractAlfrescoIT;
 import org.alfresco.rad.test.AlfrescoTestRunner;
@@ -21,8 +21,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.io.Serializable;
 import java.util.*;

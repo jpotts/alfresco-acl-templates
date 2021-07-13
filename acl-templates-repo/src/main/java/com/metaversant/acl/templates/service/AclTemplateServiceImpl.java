@@ -1,9 +1,9 @@
-package com.conexiam.acl.templates.service;
+package com.metaversant.acl.templates.service;
 
-import com.conexiam.acl.templates.authority.resolvers.AuthorityResolver;
-import com.conexiam.acl.templates.exceptions.AclTemplateServiceException;
-import com.conexiam.acl.templates.model.AclTemplate;
-import com.conexiam.acl.templates.model.AclTemplatePermission;
+import com.metaversant.acl.templates.authority.resolvers.AuthorityResolver;
+import com.metaversant.acl.templates.exceptions.AclTemplateServiceException;
+import com.metaversant.acl.templates.model.AclTemplate;
+import com.metaversant.acl.templates.model.AclTemplatePermission;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.alfresco.model.ContentModel;
 import org.alfresco.service.cmr.repository.*;
