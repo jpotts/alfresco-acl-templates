@@ -18,35 +18,35 @@
 -->
 <beans>
 
-    <bean id="authority-template.site-manager-group" class="com.conexiam.acl.templates.authority.resolvers.SiteRoleGroupResolver">
+    <bean id="authority-template.site-manager-group" class="com.metaversant.acl.templates.authority.resolvers.SiteRoleGroupResolver">
         <property name="siteService">
             <ref bean="SiteService" />
         </property>
         <property name="role" value="SiteManager" />
     </bean>
 
-    <bean id="authority-template.site-collaborator-group" class="com.conexiam.acl.templates.authority.resolvers.SiteRoleGroupResolver">
+    <bean id="authority-template.site-collaborator-group" class="com.metaversant.acl.templates.authority.resolvers.SiteRoleGroupResolver">
         <property name="siteService">
             <ref bean="SiteService" />
         </property>
         <property name="role" value="SiteCollaborator" />
     </bean>
 
-    <bean id="authority-template.site-consumer-group" class="com.conexiam.acl.templates.authority.resolvers.SiteRoleGroupResolver">
+    <bean id="authority-template.site-consumer-group" class="com.metaversant.acl.templates.authority.resolvers.SiteRoleGroupResolver">
         <property name="siteService">
             <ref bean="SiteService" />
         </property>
         <property name="role" value="SiteConsumer" />
     </bean>
 
-    <bean id="authority-template.site-contributor-group" class="com.conexiam.acl.templates.authority.resolvers.SiteRoleGroupResolver">
+    <bean id="authority-template.site-contributor-group" class="com.metaversant.acl.templates.authority.resolvers.SiteRoleGroupResolver">
         <property name="siteService">
             <ref bean="SiteService" />
         </property>
         <property name="role" value="SiteContributor" />
     </bean>
 
-    <bean id="acl-template-service" class="com.conexiam.acl.templates.service.AclTemplateServiceImpl">
+    <bean id="acl-template-service" class="com.metaversant.acl.templates.service.AclTemplateServiceImpl">
         <property name="nodeService">
             <ref bean="NodeService" />
         </property>
@@ -72,7 +72,7 @@
         </property>
     </bean>
 
-    <bean class="com.conexiam.acl.templates.service.AclTemplateServiceScopedObject" parent="baseJavaScriptExtension">
+    <bean class="com.metaversant.acl.templates.service.AclTemplateServiceScopedObject" parent="baseJavaScriptExtension">
         <property name="extensionName" value="aclTemplates" />
         <property name="aclTemplateService">
             <ref bean="acl-template-service" />

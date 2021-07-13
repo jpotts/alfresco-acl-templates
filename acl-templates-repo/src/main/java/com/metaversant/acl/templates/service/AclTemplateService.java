@@ -1,6 +1,6 @@
-package com.conexiam.acl.templates.service;
+package com.metaversant.acl.templates.service;
 
-import com.conexiam.acl.templates.exceptions.AclTemplateServiceException;
+import com.metaversant.acl.templates.exceptions.AclTemplateServiceException;
 import org.alfresco.service.cmr.repository.NodeRef;
 import org.alfresco.service.namespace.NamespaceService;
 import org.alfresco.service.namespace.QName;

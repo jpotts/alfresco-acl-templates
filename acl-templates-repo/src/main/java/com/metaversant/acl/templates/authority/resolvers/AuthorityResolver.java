@@ -1,4 +1,4 @@
-package com.conexiam.acl.templates.authority.resolvers;
+package com.metaversant.acl.templates.authority.resolvers;
 
 import org.alfresco.service.cmr.repository.NodeRef;
 

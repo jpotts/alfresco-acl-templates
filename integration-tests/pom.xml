@@ -10,7 +10,7 @@
   <!-- Note. this just runs Integration Tests, but it needs to be a JAR otherwise
                                             nothing is compiled (i.e. you cannot set it to pom) -->
   <parent>
-    <groupId>com.conexiam</groupId>
+    <groupId>com.metaversant</groupId>
     <artifactId>alfresco-acl-templates</artifactId>
     <version>1.0.2-SNAPSHOT</version>
   </parent>
